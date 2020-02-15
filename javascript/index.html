@@ -4,19 +4,18 @@
    </head>
    <body>
       <script>
-         function retornaSexo(sexo){
-            switch (sexo){
-               case 'M':
-                  return 'Masculino';
-               case 'F':
-                  return 'Feminino';
-               default: 
-                  return 'Outro';
-            }
-         }
+         // o "===" ou "==" são funções que retornam 
+         //um bool e seu tipo é:
+         // === :: a -> a -> Bool
+         // == :: a -> a -> Bool
+         //exemplo:
 
-         var resultado = retornaSexo('F');
-         console.log(resultado);
+         var sexo = 'M';
+
+         var masculino = (sexo === 'M');
+
+         console.log(masculino);
+         
       </script>
    </body>
 </html>
