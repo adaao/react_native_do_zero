@@ -1,21 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
    <head>
       <title>Curso Javascript</title>
+      <meta charset="utf-8">
    </head>
    <body>
+      <div id="app">
+         <button onclick="mostraAlerta()">Me pressione</button>
+      </div>
+      
       <script>
-         // o "===" ou "==" são funções que retornam 
-         //um bool e seu tipo é:
-         // === :: a -> a -> Bool
-         // == :: a -> a -> Bool
-         //exemplo:
-
-         var sexo = 'M';
-
-         var masculino = (sexo === 'M');
-
-         console.log(masculino);
-         
+         function mostraAlerta(){
+            alert('Me mama delicia');
+         }   
       </script>
    </body>
 </html>
