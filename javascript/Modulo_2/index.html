@@ -6,19 +6,22 @@
    </head>
    <body>
       <div id="app">
-         <button onclick="mostraAlerta()" onmouseover="mouseporcima()" >Me pressione</button>
+         <input type="text" name="nome" id="nome"/>
+         <button class="botao">Adicionar</button>
       </div>
       
       <script>
-         var times = 0;
-         function mostraAlerta(){
-            times++;
-            alert(`O Botão foi clicado ${times} vezes!`);
+         var inputElement = document.querySelector('input[name=nome');
+         var btnElement = document.querySelector('button.botao');
+         
+         btnElement.onclick = function(){
+            var text = inputElement.value;
+            alert(text);
          }
 
-         function mouseporcima(){
-            alert('você passou o mouse por cima!');
-         }   
+         btnElement.onmouseover = function(){
+            console.log('passou pelo botão');
+         }
       </script>
    </body>
 </html>
