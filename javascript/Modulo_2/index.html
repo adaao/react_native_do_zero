@@ -6,22 +6,21 @@
    </head>
    <body>
       <div id="app">
-         <input type="text" name="nome" id="nome"/>
-         <button class="botao">Adicionar</button>
+         <input id="nome" />
+        
       </div>
       
       <script>
-         var inputElement = document.querySelector('input[name=nome');
-         var btnElement = document.querySelector('button.botao');
-         
-         btnElement.onclick = function(){
-            var text = inputElement.value;
-            alert(text);
-         }
+         var linkElement = document.createElement('a');
+         var textElement = document.createTextNode('clique aqui para procrastinar!');
+         var inputElement = document.querySelector('#nome');
+         var containerElement = document.querySelector('#app');
 
-         btnElement.onmouseover = function(){
-            console.log('passou pelo botão');
-         }
+         linkElement.setAttribute('href', 'http://youtube.com');
+         linkElement.appendChild(textElement);
+         containerElement.appendChild(linkElement);
+         containerElement.removeChild(inputElement);
+
       </script>
    </body>
 </html>
