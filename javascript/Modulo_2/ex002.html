@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <title>Curso Javascript</title>
+      <meta charset="utf-8">
+   </head>
+   <body>
+      <div id="app">
+         <div>
+            <button id="btn">Criar quadrado vermelho</button>
+         </div>
+         <div id="qdds_vermelhos"></div>
+      </div>
+      
+      <script>
+         /*
+         Utilizando o resultado do primeiro desafio, 
+         toda vez que o usuário passar o mouse por cima de
+         algum quadrado troque sua cor para uma cor aleatória 
+         gerada pela função getRandomColor.
+         */
+         
+         var newColor = getRandomColor(); // #E943F0
+         var btn = document.querySelector('#btn');
+         var qdds = document.querySelector('#qdds_vermelhos');
+         
+         btn.onclick = function () {
+            var boxElement = document.createElement('div');
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.margin = '10px';
+            boxElement.style.backgroundColor = '#f00';
+            boxElement.onmouseover = function(){
+               boxElement.style.backgroundColor = getRandomColor();
+            }
+            qdds.appendChild(boxElement);
+         }
+
+         function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+               color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+         }
+      </script>
+   </body>
+</html>
