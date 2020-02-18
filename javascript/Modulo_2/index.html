@@ -6,21 +6,15 @@
    </head>
    <body>
       <div id="app">
-         <input id="nome" />
-        
+         <div class="box"></div>
       </div>
       
       <script>
-         var linkElement = document.createElement('a');
-         var textElement = document.createTextNode('clique aqui para procrastinar!');
-         var inputElement = document.querySelector('#nome');
-         var containerElement = document.querySelector('#app');
+         var boxElement = document.querySelector('.box');
 
-         linkElement.setAttribute('href', 'http://youtube.com');
-         linkElement.appendChild(textElement);
-         containerElement.appendChild(linkElement);
-         containerElement.removeChild(inputElement);
-
+         boxElement.style.width = '200px';
+         boxElement.style.height = '200px';
+         boxElement.style.backgroundColor = '#f00'; 
       </script>
    </body>
 </html>
