@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="utf-8">
+   </head>
+   <body>
+      <div id="app">
+
+      </div>
+
+      <script>
+         
+         var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+         var ul = document.createElement('ul');
+         ul.setAttribute('id', 'myUl');
+         document.querySelector('#app').appendChild(ul);
+         
+         for(nome of nomes){
+            ul.appendChild(createLi(nome));
+         }
+
+         function createLi(value){
+            var li = document.createElement('li');
+            li.appendChild(
+               document.createTextNode(value)
+            );
+            return li;
+         }
+
+      </script>
+   </body>
+</html>
