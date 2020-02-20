@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="utf-8">
+   </head>
+   <body>
+      <div id="app">
+         <input type="text" />
+         <button id="adicionar">Adicionar</button>
+
+      </div>
+
+      <script>
+         /*
+         Seguindo o resultado do exercício anterior adicione um input em tela e um botão
+         Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista denomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+         demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+         */
+         var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+         var ul = document.createElement('ul');
+         var btn = document.querySelector('#adicionar');
+         
+         ul.setAttribute('id', 'myUl');
+         document.querySelector('#app').appendChild(ul);
+         
+         for(nome of nomes){
+            ul.appendChild(createLi(nome));
+         }
+
+         function createLi(value){
+            var li = document.createElement('li');
+            li.appendChild(
+               document.createTextNode(value)
+            );
+            return li;
+         }
+
+         btn.onclick = function (){
+            inpt = document.querySelector('input');
+            nomes = [...nomes, inpt.value];
+            ul.appendChild(createLi(inpt.value));
+            inpt.value = '';
+         }
+
+      </script>
+   </body>
+</html>
