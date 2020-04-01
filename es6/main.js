@@ -1,7 +1,19 @@
-class Matematica{
-   static soma(a, b){
-      return a + b;
-   }
+const usuario = {
+   nome: "Adaao"
 }
 
-console.log(Matematica.soma(1, 2));
+usuario.nome = "Raquel";
+
+console.log(usuario.nome);
+
+function teste(x){
+   let y = 5;
+
+   if(x > y){
+      console.log(x, y);
+   }
+
+   x > y ? console.log(x, y) : console.log();
+}
+
+teste(10);
