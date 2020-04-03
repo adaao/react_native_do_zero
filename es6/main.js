@@ -1,19 +1,37 @@
-const usuario = {
-   nome: "Adaao"
-}
+const arr = [1, 2, 3, 4, 5, 6];
 
-usuario.nome = "Raquel";
+//As anotações deste arquivo são para que eu, Adaão, 
+//me lembre de como funciona, são uma espécie de
+//mapa mental.
 
-console.log(usuario.nome);
 
-function teste(x){
-   let y = 5;
+//basing on Haskell types:
+//t: .map() :: (a -> b) -> a -> b
+//or
+//t: .map() :: (a -> b -> c) -> a -> b -> c
+//where b is the index of an element
 
-   if(x > y){
-      console.log(x, y);
-   }
 
-   x > y ? console.log(x, y) : console.log();
-}
+const newArr = arr.map(function(item, index){
+   return item + index;
+});
 
-teste(10);
+console.log(newArr);
+
+const sum = arr.reduce(function(total, next){
+   return total + next;
+});
+
+console.log(sum);
+
+const filter = arr.filter(function(item){
+   return item % 2 === 0;
+})
+
+console.log(filter);
+
+const find = arr.find(function(item){
+   return item === 2;
+})
+
+console.log(find);
