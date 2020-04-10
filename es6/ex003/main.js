@@ -51,6 +51,7 @@ const mostraUsuario = (nome = 'foo', idade = 18) => ({ nome, idade });
 var usr = mostraUsuario(nome, idade);
 var usr2 = mostraUsuario(nome);
 console.log(usr, usr2);
+console.log(mostraUsuario());
 
 
 /*
